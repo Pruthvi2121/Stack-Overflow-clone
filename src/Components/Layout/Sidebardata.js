@@ -1,9 +1,4 @@
 
-import { CgProfile } from 'react-icons/cg'
-import { BsCardChecklist} from 'react-icons/bs'
-import { GiHouse} from 'react-icons/gi'
-import {BsGraphUp} from 'react-icons/bs'
-import {TbMathSymbols} from 'react-icons/tb'
 
 
 import {BiQuestionMark , BiFile} from 'react-icons/bi'
@@ -13,7 +8,6 @@ import {TbBadge} from 'react-icons/tb'
 import {CiBullhorn} from 'react-icons/ci'
 import {MdOutlineComment} from 'react-icons/md'
 
-import {GiReceiveMoney, GiPayMoney} from 'react-icons/gi'
 
 
 const size="1rem"
@@ -25,42 +19,42 @@ export const Sidebardata = [
             },
             {
                 title:"JOBS",
-                path:"/",
+                path:"/jobs",
                 icon:<BsBag size={size}  />,
             },
             {
                 title:"DOCUMENTATION",
-                path:"/",
+                path:"/docs",
                 icon:<BiFile size={size}   />,
             },
             {
                 title:"TAGS",
-                path:"/",
+                path:"/tags",
                 icon:<BsTag size={size}   />,
             },
             {
                 title:"USERS",
-                path:"/",
+                path:"/users",
                 icon:<AiOutlineUser size={size}  />,
             },
             {
                 title:"BADGES",
-                path:"/",
+                path:"/badges",
                 icon:<TbBadge size={size}  />,
             },
             {
                 title:"ASK QUESTION",
-                path:"/",
+                path:"/ask",
                 icon:<CiBullhorn size={size} />,
             },
             {
                 title:"STACK EXCHANGE",
-                path:"/",
+                path:"/stack",
                 icon:<MdOutlineComment size={size} />,
             },
             {
                 title:"INBOX",
-                path:"/",
+                path:"/inbox",
                 icon:<AiOutlineInbox size={size} />,
             }
         ]

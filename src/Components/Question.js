@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {FiThumbsUp} from 'react-icons/fi'
+import {FiThumbsUp ,FiArrowRightCircle} from 'react-icons/fi'
 import {AiOutlineEye} from 'react-icons/ai'
 import {BiComment} from 'react-icons/bi'
 
 const Question = () =>{
     const [data, setData] = useState([])
+    const [tag, settag] = useState("")
     
     useEffect(()=>{
-     axios.get(`https://api.stackexchange.com/2.3/questions?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&page=1&pagesize=8&order=desc&sort=activity&filter=default`)
+     axios.get(`https://api.stackexchange.com/2.3/questions?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&pagesize=10&order=desc&sort=activity&tagged=${tag}&filter=default`)
         .then((res)=>{
             console.log(res)
             setData(res.data.items)
@@ -18,7 +19,7 @@ const Question = () =>{
             console.log(err)
         })
 
-    },[])
+    },[tag])
 
 
 
@@ -55,7 +56,9 @@ const Question = () =>{
                 <button className="border bg-white  rounded-full px-2 ">hot</button>
                 <button className="border bg-white rounded-full px-2 ">week</button>
                 <button className="border bg-white rounded-full px-2 ">month</button>
-
+                <div className="ml-auto mr-2 flex">
+                    <input type="text" className="border bg-white rounded-full px-4 outline-none" placeholder="search" onChange={(e)=>{settag(e.target.value)}}/>
+                </div>
                 
            </div>
            {
