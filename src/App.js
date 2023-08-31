@@ -1,7 +1,7 @@
 
 import './index.css';
 import { Routes,Route } from 'react-router-dom';
-import Landingpage from './Components/Landingpage/Landingpage';
+import Question from './Components/Question';
 import Sidebar from './Components/Sidebar';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div>
       
       <Routes>
-        <Route path='/' element={<Sidebar><Landingpage/></Sidebar>}/> 
+        <Route path='/' element={<Sidebar><Question/></Sidebar>}/> 
       </Routes>
     </div>
   );
